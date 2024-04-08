@@ -30,11 +30,11 @@ class UserLoginTest extends TestCase
         $this->get('/login')->assertOk();
 
         $response = $this->post('/login', [
-            'login' => $this->user->email,
-            'password' => $this->user->password,
+            'email' => $this->user->email,
+            'password' => 'password',
         ]);
 
-        $response->assertStatus(200);
-        $response->assertLocation('home');
+        $this->assertAuthenticatedAs($this->user);
+        $response->assertRedirect(route('home'));
     }
 }
