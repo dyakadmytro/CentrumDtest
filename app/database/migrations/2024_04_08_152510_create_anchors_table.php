@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('anchors', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 64);
+            $table->string('title', 64)->nullable();
             $table->string('url', 2048);
-            $table->string('link', 64);
+            $table->string('link', 8);
             $table->integer('ttl')->unsigned();
-            $table->tinyInteger('max_follow')->unsigned();
+            $table->bigInteger('max_follow')->unsigned();
 
             $table->index('link', 'link_slug_index', 'hash');
         });

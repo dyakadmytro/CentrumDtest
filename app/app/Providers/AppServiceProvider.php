@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Services\AnchorService;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -11,7 +12,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->singleton(AnchorService::class, function () {
+            return new AnchorService();
+        });
     }
 
     /**
@@ -19,6 +22,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+//        \Illuminate\Support\Facades\Facade::class_alias('anchor', 'AnchorService');
     }
 }
