@@ -35,8 +35,8 @@
         </div>
 
         <div class="mb-3">
-            <label for="max_follow" class="form-label">Max Follow</label>
-            <input type="number" class="form-control" id="max_follow" name="max_follow" value="0" min="0" max="99" required>
+            <label for="max_follows" class="form-label">Max Follow</label>
+            <input type="number" class="form-control" id="max_follows" name="max_follows" value="0" min="0" max="99" required>
             <div class="invalid-feedback">
                 Please provide a number between 0 and 99.
             </div>

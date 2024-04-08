@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Services\AnchorService;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -22,6 +23,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-//        \Illuminate\Support\Facades\Facade::class_alias('anchor', 'AnchorService');
+        Route::pattern('slug', '[a-zA-Z0-9]{8}');
     }
 }

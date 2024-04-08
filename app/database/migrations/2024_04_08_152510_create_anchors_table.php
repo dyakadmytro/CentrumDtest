@@ -15,11 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('title', 64)->nullable();
             $table->string('url', 2048);
-            $table->string('link', 8);
+            $table->string('slug', 8);
             $table->integer('ttl')->unsigned();
-            $table->bigInteger('max_follow')->unsigned();
+            $table->bigInteger('max_follows')->unsigned();
+            $table->bigInteger('followed')->default(0)->unsigned();
+            $table->timestamp('created_at')->useCurrent();
 
-            $table->index('link', 'link_slug_index', 'hash');
+            $table->index('slug', 'link_slug_index', 'hash');
         });
     }
 

@@ -19,9 +19,9 @@ class AnchorFactory extends Factory
         return [
             'title' => $this->faker->word(),
             'url' => $this->faker->url(),
-            'link' => $this->faker->url(),
+            'slug' => $this->faker->url(),
             'ttl' => $this->faker->numberBetween(1, 86400),
-            'max_follow' => $this->faker->numberBetween(0, 99),
+            'max_follows' => $this->faker->numberBetween(0, 99),
         ];
     }
 }

@@ -25,7 +25,7 @@ class AnchorCreateRequest extends FormRequest
             "title" => "nullable|string|max:64",
             "url" => "required|url:http,https|max:2048",
             "ttl" => "required|integer|min:1|max:86400",
-            "max_follow" => "required|integer|min:0"
+            "max_follows" => "required|integer|min:0"
         ];
     }
 }

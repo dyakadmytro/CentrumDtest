@@ -30,7 +30,7 @@ class AnchorTest extends TestCase
         $data = Anchor::factory()->make();
 //        $this->get(route('anchor.create'))->assertOk();
         $response = $this->post(route('anchor.store'), [
-            $data->only(['title', 'url', 'ttl', 'max_follow'])
+            $data->only(['title', 'url', 'ttl', 'max_follows'])
         ]);
 
 //        $this->assertDatabaseHas('anchors', [

@@ -25,9 +25,9 @@
                     <th scope="row">{{ $loop->iteration }}</th>
                     <td>{{ $anchor->title }}</td>
                     <td><a href="{{ $anchor->url }}" target="_blank">{{ $anchor->url }}</a></td>
-                    <td><a href="{{ $anchor->link }}" target="_blank">{{ $anchor->link }}</a></td>
+                    <td><a href="{{route('slug', $anchor->slug) }}" target="_blank">{{ $anchor->slug }}</a></td>
                     <td>{{ $anchor->ttl }}</td>
-                    <td>{{ $anchor->max_follow }}</td>
+                    <td>{{ $anchor->max_follows }}</td>
                 </tr>
             @endforeach
             </tbody>
