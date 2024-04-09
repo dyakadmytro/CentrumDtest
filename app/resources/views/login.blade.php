@@ -1,13 +1,13 @@
-@extends('components.layout')
+@extends('components.base')
 
-@section('content')
-    <div class="row justify-content-center">
-        <div class="col-md-6">
+@section('page')
+    <div class="row justify-content-center mt-10">
+        <div class="col-3" style="margin: 10em">
             <div class="card">
-                <div class="card-header">
-                    Login
+                <div class="card-header bg-warning bg-gradient justify-content-center d-flex">
+                    <strong>Authentication</strong>
                 </div>
-                <div class="card-body">
+                <div class="card-body px-5 bg-light">
                     <form action="/login" method="POST">
                         @csrf
                         <div class="mb-3">
