@@ -2,7 +2,7 @@
 
 @section('page')
     <x-navbar/>
-    <div class="container">
+    <div class="container" style="margin-top: 5em">
         @yield('content')
     </div>
 @endsection
