@@ -48,7 +48,16 @@ Configure the application by entering the workspace container and setting up the
 3. **Configure app:**
    ```sh
     php artisan key:generate
+   
+4. **Run migrations**
+   ```sh
+    php artisan migrate
+   
+5. **Run seeders**
+   ```sh
+    php artisan db:seed
 
 ## Using Your App
 
 To use **CentrumD**, open your web browser and visit http://localhost:8091.
+your user creds are: test_admin@example.com password
