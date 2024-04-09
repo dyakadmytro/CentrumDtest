@@ -8,7 +8,12 @@
                     <h2>Anchor List</h2>
                 </div>
                 <div class="card-body">
-        <table class="table">
+                    <nav class="navbar d-flex flex-row-reverse">
+                        <div class="">
+                            <a class="btn btn-success" href="{{route('anchor.create')}}" role="button">Create</a>
+                        </div>
+                    </nav>
+                    <table class="table">
             <thead>
             <tr>
                 <th scope="col">#</th>
